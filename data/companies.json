@@ -1,0 +1,36 @@
+{
+  "companies": [
+    { "name": "Golden House Development", "slug": "golden-house-development", "segment": "Premium", "cities": ["Tashkent"], "projects": ["Nest One", "Magnum", "Skyline", "Diamond Park"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Murad Buildings", "slug": "murad-buildings", "segment": "Premium", "cities": ["Tashkent"], "projects": ["Murad Towers", "City Line", "High Vill"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "TXT Group (TXT Development)", "slug": "txt-group", "segment": "Premium", "cities": ["Tashkent"], "projects": ["Highvill Tashkent", "Central Park Residence"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Millennium Group", "slug": "millennium-group", "segment": "Business", "cities": ["Tashkent"], "projects": ["Millennium Residence", "Grand Avenue", "Lotus Village"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Nest One Developers", "slug": "nest-one-developers", "segment": "Premium", "cities": ["Tashkent"], "projects": ["Nest One Towers"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Highvill Tashkent (JV)", "slug": "highvill-tashkent", "segment": "Premium", "cities": ["Tashkent"], "projects": ["Highvill Tashkent"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Dream City Development", "slug": "dream-city-development", "segment": "Premium", "cities": ["Tashkent"], "projects": ["Tashkent City District", "Hotel Complex"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Akay City Group", "slug": "akay-city-group", "segment": "Premium", "cities": ["Tashkent"], "projects": ["Akay City"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Gulf Construction", "slug": "gulf-construction", "segment": "Premium", "cities": ["Tashkent"], "projects": ["Premium Apartments"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Fayz Development Group", "slug": "fayz-development-group", "segment": "Business", "cities": ["Tashkent"], "projects": ["Fayz Residence"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+
+    { "name": "Saxovat Stroy Invest", "slug": "saxovat-stroy-invest", "segment": "Mid", "cities": ["Tashkent"], "projects": ["Multi-apartment Complexes"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Best City Group", "slug": "best-city-group", "segment": "Business", "cities": ["Tashkent"], "projects": ["Best City Residence"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Orient Group Development", "slug": "orient-group-development", "segment": "Business", "cities": ["Tashkent"], "projects": ["Orient Towers", "Orient Hills"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "AKFA Group Development", "slug": "akfa-group-development", "segment": "Business", "cities": ["Tashkent"], "projects": ["Innovative Housing"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Eurasia Development", "slug": "eurasia-development", "segment": "Mid", "cities": ["Tashkent"], "projects": ["Mirzo-Ulugbek Projects"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Oasis Development", "slug": "oasis-development", "segment": "Business", "cities": ["Tashkent"], "projects": ["Oasis Residence"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "New City Developers", "slug": "new-city-developers", "segment": "Mid", "cities": ["Tashkent"], "projects": ["New City Tashkent"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Capital Invest Stroy", "slug": "capital-invest-stroy", "segment": "Premium", "cities": ["Tashkent"], "projects": ["Capital Towers"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "UzBuild Invest", "slug": "uzbuild-invest", "segment": "Business", "cities": ["Tashkent"], "projects": ["Yunusobod Business-class"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Lotus Development Group", "slug": "lotus-development-group", "segment": "Mid", "cities": ["Tashkent"], "projects": ["Lotus Village"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+
+    { "name": "Samarqand Developers", "slug": "samarqand-developers", "segment": "Business", "cities": ["Samarkand"], "projects": ["Samarkand City Residence"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Namangan Development Group", "slug": "namangan-development-group", "segment": "Mid", "cities": ["Namangan"], "projects": ["Namangan Residences"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Andijon Qurilish Invest", "slug": "andijon-qurilish-invest", "segment": "Mid", "cities": ["Andijan"], "projects": ["Andijan Apartments"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Fergana Grand Stroy", "slug": "fergana-grand-stroy", "segment": "Mid", "cities": ["Fergana"], "projects": ["Fergana Blocks"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Qarshi Stroy Development", "slug": "qarshi-stroy-development", "segment": "Economy", "cities": ["Qarshi"], "projects": ["Affordable Housing"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Bukhara Residence Group", "slug": "bukhara-residence-group", "segment": "Mid", "cities": ["Bukhara"], "projects": ["Bukhara City Residence"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Navoi Builders Group", "slug": "navoi-builders-group", "segment": "Mid", "cities": ["Navoi"], "projects": ["Navoi Apartments"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Sirdaryo Invest Development", "slug": "sirdaryo-invest-development", "segment": "Mid", "cities": ["Guliston"], "projects": ["Mid-class Apartments"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Xorazm Stroy Development", "slug": "xorazm-stroy-development", "segment": "Mid", "cities": ["Khorezm"], "projects": ["Khiva Residential"], "social": {"telegram": "", "instagram": ""}, "website": "" },
+    { "name": "Qoraqalpog‘iston Residence Group", "slug": "qoraqalpogiston-residence-group", "segment": "Mid", "cities": ["Nukus"], "projects": ["Nukus Complexes"], "social": {"telegram": "", "instagram": ""}, "website": "" }
+  ]
+}
