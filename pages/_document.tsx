@@ -1,5 +1,28 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
+const themeInitializer = `(() => {
+  const setTheme = (theme) => {
+    const isDark = theme === 'dark';
+    const root = document.documentElement;
+    if (!root) return;
+    root.classList.toggle('dark', isDark);
+    root.style.colorScheme = isDark ? 'dark' : 'light';
+  };
+
+  try {
+    const stored = window.localStorage.getItem('theme');
+    if (stored === 'dark' || stored === 'light') {
+      setTheme(stored);
+      return;
+    }
+  } catch (error) {
+    /* no-op */
+  }
+
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(prefersDark ? 'dark' : 'light');
+})();`;
+
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -10,6 +33,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en" className="scroll-smooth">
         <Head>
+          <script dangerouslySetInnerHTML={{ __html: themeInitializer }} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import type { GetStaticProps, NextPage } from 'next';
 import { useMemo, useState } from 'react';
 import CompanyCard, { Company } from '../components/CompanyCard';
 import Filters from '../components/Filters';
@@ -7,9 +8,13 @@ import companiesJson from '../data/companies.json';
 
 type Theme = 'light' | 'dark';
 
-type HomeProps = {
+type ThemeProps = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
+};
+
+type HomeProps = ThemeProps & {
+  companies: Company[];
 };
 
 const texts = {
@@ -43,10 +48,7 @@ const texts = {
   }
 };
 
-const companiesData = companiesJson as { companies: Company[] };
-const allCompanies: Company[] = companiesData.companies;
-
-const HomePage: React.FC<HomeProps> = ({ theme, setTheme }) => {
+const HomePage: NextPage<HomeProps> = ({ companies, theme, setTheme }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [segmentFilter, setSegmentFilter] = useState('');
   const [cityFilter, setCityFilter] = useState('');
@@ -54,26 +56,26 @@ const HomePage: React.FC<HomeProps> = ({ theme, setTheme }) => {
 
   const segments = useMemo(() => {
     const values = new Set<string>();
-    allCompanies.forEach((company) => {
+    companies.forEach((company) => {
       if (company.segment) {
         values.add(company.segment);
       }
     });
     return Array.from(values).sort();
-  }, []);
+  }, [companies]);
 
   const cities = useMemo(() => {
     const values = new Set<string>();
-    allCompanies.forEach((company) => {
+    companies.forEach((company) => {
       company.cities?.forEach((city) => values.add(city));
     });
     return Array.from(values).sort();
-  }, []);
+  }, [companies]);
 
   const filteredCompanies = useMemo(() => {
     const normalizedSearch = searchTerm.trim().toLowerCase();
 
-    return allCompanies
+    return companies
       .filter((company) => {
         if (segmentFilter && company.segment !== segmentFilter) return false;
         if (cityFilter && !company.cities?.includes(cityFilter)) return false;
@@ -96,7 +98,7 @@ const HomePage: React.FC<HomeProps> = ({ theme, setTheme }) => {
           ? a.name.localeCompare(b.name)
           : b.name.localeCompare(a.name);
       });
-  }, [searchTerm, segmentFilter, cityFilter, sortOrder]);
+  }, [searchTerm, segmentFilter, cityFilter, sortOrder, companies]);
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -184,3 +186,13 @@ const HomePage: React.FC<HomeProps> = ({ theme, setTheme }) => {
 };
 
 export default HomePage;
+
+export const getStaticProps: GetStaticProps<{ companies: Company[] }> = async () => {
+  const companiesData = companiesJson as { companies: Company[] };
+
+  return {
+    props: {
+      companies: companiesData.companies
+    }
+  };
+};
